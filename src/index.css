@@ -1,13 +1,254 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* header styling  */
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 4rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid rgb(224, 224, 224);
 }
+
+.Navbar,
+i {
+  cursor: pointer;
+}
+.togglemenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(85, 85, 85);
+}
+
+.searchbar i {
+  color: rgb(95, 95, 95);
+}
+
+.searchbar {
+  background-color: #efefef;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar input {
+  width: 45vw;
+  border: none;
+  outline: none;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  background-color: #efefef;
+}
+.menuright i {
+  margin-right: 1.3rem;
+  color: gray;
+  font-size: 1.4rem;
+}
+.menuright {
+  width: 33vw;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo,
+.menuright {
+  display: flex;
+  align-items: center;
+}
+
+.fa-file {
+  color: #e6a701;
+  font-size: 2.5rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  color: rgb(88, 88, 88);
+  cursor: pointer;
+  width: 5vw;
+}
+.logo img {
+  width: 40px;
+}
+
+.settings i {
+  margin-right: 4rem;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .searchbar {
+    background-color: white;
+    margin-left: 5rem;
+  }
+  .searchbar input,
+  .fa-times {
+    display: none;
+  }
+  .fa-search {
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+@media screen and (max-width: 700px) {
+  .refresh,
+  .listview,
+  .settings,
+  .googleappsgrid {
+    display: none;
+  }
+}
+/* header styling  */
+
+
+
+/* __________________________________________input  box styling  */
+
+
+
+.input-note-box{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 35vw;
+  height: 100%;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.342);
+  border-radius: .5rem;
+}
+
+
+input,
+textarea {
+  width: 95%;
+  line-height: 1rem;
+  border: none;
+  outline: none;
+  padding: .5rem;
+}
+input {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+textarea {
+  border: none;
+  resize: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* __________________________ output div styling ________________*/
+
+
+.outputdivbox{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100%;
+  margin-top: 4rem;
+}
+
+.oneboxdiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 20vw;
+  height: 100%;
+  
+}
+
+.one-box{
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: white;
+  width: 22vw;
+  height: 100%;
+  border: 1.2px solid rgba(128, 128, 128, 0.521);
+}
+
+
+.one-box:hover{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.438);
+}
+
+
+
+
+/* ==================================== */
+
+.box-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  color: rgb(114, 114, 114);
+  font-size: .8rem;
+  padding: 1rem 0;
+}
+
+
+.box-footer i{
+  padding: 1rem;
+  border-radius: 50%;
+}
+.fa-undo,.fa-redo{
+  color: rgb(173, 173, 173);
+  font-size: .7rem;
+}
+.box-footer i:hover{
+  background-color: #e7e7e7;
+}
+
+
+
+.output-box-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  color: rgb(114, 114, 114);
+  font-size: .8rem;
+  padding: 1rem 0;
+}
+
